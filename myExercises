@@ -1,0 +1,209 @@
+// ****** Exercics 1 Address *****
+// let address = {
+//   street: "a",
+//   city: "b",
+//   zipCode: "c",
+// };
+
+// function showAddress(address) {
+//   for (let key in address) console.log(key, address[key]);
+// }
+
+// showAddress(address);
+
+// ***** Factory Fucnction *********
+// let address = createAddress("a", "b", "c");
+
+// console.log(address);
+// function createAddress(street, city, zipCode) {
+//   return {
+//     street,
+//     city,
+//     zipCode,
+//   };
+// }
+
+//******  Constructor Function *******
+// let address = new address("a", "b", "c");
+// console.log(address);
+
+// function Address(street, city, zipCode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipCode = zipCode;
+// }
+
+// ****** Object Equality ******
+// let address1 = new Address("a", "b", "c");
+// let address2 = new Address("a", "b", "c");
+
+// console.log(areEqual(address1, address2));
+// console.log(areSame(address1, address2));
+
+// function Address(street, city, zipCode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipCode = zipCode;
+// }
+
+// function areEqual(address1, address2) {
+//   return address1.street === address2.street && address1.city;
+//   address1.city === address2.city && address1.zipCode === address2.zipCode;
+// }
+
+// function areSame(address1, address2) {
+//   return address1 === address2;
+// }
+
+// ********* Blog Post Object ******
+// let post = {
+//   title: "a",
+//   body: "b",
+//   author: "c",
+//   views: 10,
+//   comments: [
+//     { author: "a", body: "b" },
+//     { author: "c", body: "d" },
+//   ],
+//   isLive: true,
+// };
+
+// console.log(post);
+
+// ******* constructor Blog Post Object *****
+
+// let post = new Post("a", "b", "c");
+
+// console.log(post);
+
+// function Post(title, body, author) {
+//   this.title = title;
+//   this.body = body;
+//   this.author = author;
+//   this.views = 0;
+//   this.comments = [];
+//   this.isLive = false;
+// }
+
+// ********* Price Range Object ******
+// let priceRanges = [
+//   { label: "$", tooltip: "Inexpensive", mainPerson: 0, maxPerson: 10 },
+//   { label: "$$", tooltip: "Moderate", mainPerson: 11, maxPerson: 20 },
+//   { label: "$$$", tooltip: "Expensive", mainPerson: 21, maxPerson: 50 },
+// ];
+
+// let resturents = [{ averagePerPerson: 5 }];
+
+// ******************** Array from Range ****************
+// const numbers = arrayFromRange(1, 5);
+
+// console.log(numbers);
+
+// function arrayFromRange(min, max) {
+//   const output = [];
+//   for (let i = min; i <= max; i++) output.push(i);
+//   return output;
+// }
+
+// ********************* Includes Arrays *****************
+
+// const numbers = [1, 2, 3, 4];
+
+// console.log(includes(numbers, -1));
+
+// function includes(array, searchElement) {
+//   for (let element of array) if (element === searchElement) return true;
+//   return false;
+// }
+
+// **************** Except ***************
+// const numbers = [1, 2, 3, 4];
+
+// const output = except(numbers, [1, 2]);
+
+// console.log(output);
+
+// function except(array, excluded) {
+//   const output = [];
+//   for (let element of array)
+//     if (!excluded.includes(element)) output.push(element);
+//   return output;
+// }
+
+// **************** Move an Element ********************
+// const numbers = [1, 2, 3, 4];
+
+// const output = move(numbers, 0, 1);
+
+// console.log(output);
+
+// function move(array, index, offset) {
+//   const position = index + offset;
+//   if (position >= array.length || position < 0) {
+//     console.error("Invalid offset.");
+//     return;
+//   }
+
+//   const output = [...array];
+//   const element = output.splice(index, 1)[0];
+//   output.splice(position, 0, element);
+//   return output;
+// }
+
+// ****************** Count Occurrences *******************
+
+// const numbers = [1, 2, 3, 4];
+
+// const count = countOccurrences(numbers, 1);
+
+// console.log(count);
+
+// function countOccurrences(array, searchElement) {
+// let count = 0;
+// for (let element of array)
+//   if (element === searchElement)
+//     count++;
+// return count;
+
+//   return array.reduce((accumulator, current) => {
+//     const occurrence = current === searchElement ? 1 : 0;
+//     console.log(accumulator, current, searchElement);
+//     return accumulator + occurrence;
+//   }, 0);
+// }
+
+// ******************* Get Max ***************
+
+// const numbers = [1, 2, 3, 4];
+
+// const max = getMax([]);
+
+// console.log(max);
+
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
+
+// let max = array[0];
+
+// for (let i = 1; i < array.length; i++)
+//   if (array[i] > max)
+//     max = array[i];
+
+// return max;
+
+//   return array.reduce((a, b) => (a > b ? a : b));
+// }
+
+// ********************* Movies *******************
+// const movies = [
+//   { title: "a", year: 2018, rating: 4.5 },
+//   { title: "b", year: 2018, rating: 4.7 },
+//   { title: "c", year: 2018, rating: 3 },
+//   { title: "d", year: 2017, rating: 4.5 },
+// ];
+// const title = movies
+//   .filter((m) => m.year === 2018 && m.rating >= 4)
+//   .sort((a, b) => a.rating - b.rating)
+//   .reverse()
+//   .map((m) => m.title);
+// console.log(title);
